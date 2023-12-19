@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.position += new Vector3(-1, 0, 0) * Time.deltaTime * speed;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
             if (_animator.GetBool("Jump") == false && Input.GetKey(KeyCode.Space) != true)
             {
                 _animator.SetBool("Run", true);
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(1, 0, 0) * Time.deltaTime * speed;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             if (_animator.GetBool("Jump") == false && Input.GetKey(KeyCode.Space) != true)
             {
                 _animator.SetBool("Run", true);

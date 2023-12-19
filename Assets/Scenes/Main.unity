@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 414408670}
   - component: {fileID: 414408669}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: stage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2228,6 +2228,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2301,6 +2302,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff044c239383411cba295f82458a03d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2309772645256148187}
 --- !u!1 &1209181154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,7 +2439,7 @@ GameObject:
   - component: {fileID: 1441466665}
   - component: {fileID: 1441466664}
   - component: {fileID: 1441466663}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2440,8 +2454,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441466661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0068759914, y: -0.141, z: 0}
-  m_LocalScale: {x: 0.16666666, y: 0.16666666, z: 1}
+  m_LocalPosition: {x: -0.063, y: 4.077, z: 0}
+  m_LocalScale: {x: 0.44157103, y: 0.21644564, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2309772645256148185}
@@ -2668,7 +2682,7 @@ GameObject:
   - component: {fileID: 1721558192991004399}
   - component: {fileID: 2254880123956671860}
   - component: {fileID: 2497691399183082177}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: "10 Cape \uBCF5\uC0AC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2700,7 +2714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1636344549864922869}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2737,7 +2751,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8164659752464588691}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2770,7 +2784,7 @@ GameObject:
   - component: {fileID: 3409751478730294669}
   - component: {fileID: 6156992500786306420}
   - component: {fileID: 8129076253637972284}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 11 head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2788,7 +2802,7 @@ GameObject:
   - component: {fileID: 16761112020477213}
   - component: {fileID: 5993897304978032575}
   - component: {fileID: 4073451567532777701}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 16 arm front down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2806,7 +2820,7 @@ GameObject:
   - component: {fileID: 6464392101369882982}
   - component: {fileID: 2501368797193767684}
   - component: {fileID: 3452261956321754870}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 02 arm back up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2840,7 +2854,7 @@ GameObject:
   - component: {fileID: 517576483507969720}
   - component: {fileID: 2753364448998848146}
   - component: {fileID: 4960626171801529163}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 05 leg back down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2886,7 +2900,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1549639619060220574}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3083,7 +3097,7 @@ GameObject:
   - component: {fileID: 8457821997182109953}
   - component: {fileID: 5944146504805307062}
   - component: {fileID: 7484594783865761346}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 13 hair side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3140,7 +3154,7 @@ GameObject:
   - component: {fileID: 2309772645256148188}
   - component: {fileID: 2309772645256148189}
   - component: {fileID: 2309772645256148190}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3227,7 +3241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8733773212321312906}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3478,7 +3492,7 @@ GameObject:
   - component: {fileID: 1933930201739144136}
   - component: {fileID: 2715792876365574991}
   - component: {fileID: 143042735672916521}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 01 hair back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3511,7 +3525,7 @@ GameObject:
   - component: {fileID: 2056805263105850231}
   - component: {fileID: 4374564775486696190}
   - component: {fileID: 303345861324069960}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: "15 Staff \uBCF5\uC0AC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3529,7 +3543,7 @@ GameObject:
   - component: {fileID: 7192740778936875922}
   - component: {fileID: 5069872676390351398}
   - component: {fileID: 5498249167676529277}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 08 Skirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3712,7 +3726,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8984780137351499461}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3782,7 +3796,7 @@ GameObject:
   - component: {fileID: 7075437933665492601}
   - component: {fileID: 4314986713414391292}
   - component: {fileID: 8193820880818891804}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 04 leg back up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3800,7 +3814,7 @@ GameObject:
   - component: {fileID: 1256798960577786862}
   - component: {fileID: 2521627935532771281}
   - component: {fileID: 6906934368359983676}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 14 arm front up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3831,7 +3845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3445187659141511697}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3957,7 +3971,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6239001772004075729}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4027,7 +4041,7 @@ GameObject:
   - component: {fileID: 2726118349365738}
   - component: {fileID: 5825136158469680615}
   - component: {fileID: 2407292143683865316}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 12 hair front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4065,7 +4079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8076315539735382878}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4202,7 +4216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 833189128412527109}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4218,7 +4232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7171744361796165598}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4286,7 +4300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2902717451929050215}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4436,7 +4450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9168694107750189828}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Skeletal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4469,7 +4483,7 @@ GameObject:
   - component: {fileID: 6913269421244525638}
   - component: {fileID: 4923714782027568517}
   - component: {fileID: 2239997698502191986}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 06 leg front up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4567,7 +4581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1631418397823853778}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4621,7 +4635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 177326092586204738}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4639,7 +4653,7 @@ GameObject:
   - component: {fileID: 1133541889043971587}
   - component: {fileID: 5534530389991487864}
   - component: {fileID: 4342837016041758224}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 03 arm back down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4707,7 +4721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7277938190185414861}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4723,7 +4737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5505860867554594705}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4739,7 +4753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4716647191824210394}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4814,7 +4828,7 @@ GameObject:
   - component: {fileID: 2222913343215122200}
   - component: {fileID: 8784004217617757615}
   - component: {fileID: 3368576328978071968}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 09 Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4851,7 +4865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4543513780670712262}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4969,7 +4983,7 @@ GameObject:
   - component: {fileID: 6797775132025575493}
   - component: {fileID: 7860215379831766222}
   - component: {fileID: 5049976010726621497}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 07 leg front down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
