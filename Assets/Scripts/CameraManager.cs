@@ -6,6 +6,7 @@ public class CameraManager : MonoBehaviour
 {
     [SerializeField] GameObject player;
     private Vector3 offset;
+    [SerializeField] float camX, camZ;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class CameraManager : MonoBehaviour
     void LateUpdate()
     {
         var afteroffset = player.transform.position + offset;
-        afteroffset = new Vector3(0.91f, afteroffset.y, -6.28f);
+        afteroffset = new Vector3(camX, afteroffset.y, camZ);
         transform.position = Vector3.Lerp(transform.position, afteroffset, 6.0f * Time.deltaTime);
     }
 }
