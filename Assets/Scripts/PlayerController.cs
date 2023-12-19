@@ -5,30 +5,44 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Animator _animator;
+    Rigidbody2D _rigidbody;
+    [SerializeField] float speed;
     // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A) && _animator.GetBool("Jump") == false)
+        if (Input.GetKey(KeyCode.A))
         {
-            _animator.SetBool("Run", true);
+            transform.position += new Vector3(-1, 0, 0) * Time.deltaTime * speed;
+            if (_animator.GetBool("Jump") == false && Input.GetKey(KeyCode.Space) != true)
+            {
+                _animator.SetBool("Run", true);
+            }
         }
-        else if (Input.GetKey(KeyCode.D) && _animator.GetBool("Jump") == false)
+        else if (Input.GetKey(KeyCode.D))
         {
-            _animator.SetBool("Run", true);
+            transform.position += new Vector3(1, 0, 0) * Time.deltaTime * speed;
+            if (_animator.GetBool("Jump") == false && Input.GetKey(KeyCode.Space) != true)
+            {
+                _animator.SetBool("Run", true);
+            }
         }
-        else _animator.SetBool("Run", false);
+        else if(Input.GetKey(KeyCode.A)!= true && Input.GetKey(KeyCode.D)!= true) _animator.SetBool("Run", false);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && JumpCounter.JumpCount==1)
         {
-            _animator.SetBool("Jump", true);
+            JumpCounter.canJump = false;
             _animator.SetBool("Run", false);
+            _rigidbody.AddForce(new Vector3(0, 300, 0), ForceMode2D.Force);
+            _animator.SetBool("Jump", true);
+            JumpCounter.JumpCount = 0;
         }
-        else _animator.SetBool("Jump", false);
+        else if(JumpCounter.canJump == true) _animator.SetBool("Jump", false);
     }
 }
