@@ -17,7 +17,7 @@ public class JumpCounter : MonoBehaviour
     {
         // Debug.Log(canJump);
         Ray2D ray = new Ray2D(transform.position, -transform.up); // Rayを生成、-transform.upは進行方向
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 1.8f);//Raycastを生成
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 2f);//Raycastを生成
 
         Debug.DrawRay(ray.origin, ray.direction * 1f, Color.green, 0.015f); // 長さ1f、緑色で1フレーム可視化
  
