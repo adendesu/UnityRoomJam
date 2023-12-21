@@ -6,6 +6,7 @@ TagManager:
   tags:
   - stage
   - ThrowObject
+  - star
   layers:
   - Default
   - TransparentFX

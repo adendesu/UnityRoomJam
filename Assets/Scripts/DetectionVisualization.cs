@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
-
+using DG.Tweening;
 public class DetectionVisualization : MonoBehaviour
 {
     private SpriteRenderer SpriteRenderer;
@@ -20,16 +20,18 @@ public class DetectionVisualization : MonoBehaviour
         else isPush = false;
         await ChangeColor();
     }
+
     async UniTask ChangeColor()
     {
-        while (true)
-        {
-            if (isPush && SpriteRenderer.color.a < 125)
+      //  while (true)
+        //{
+            if (isPush && SpriteRenderer.color.a < 0.5f)
             {
-                SpriteRenderer.color += new Color(0, 0, 0f, 1);
+                SpriteRenderer.color += new Color(0, 0, 0f, 0.001f);
             }
-            else if(SpriteRenderer.color.a >0) SpriteRenderer.color += new Color(0, 0, 0f, -1);
-        }
-        await UniTask.Delay(100);
+            else if(SpriteRenderer.color.a >　0) SpriteRenderer.color += new Color(0, 0, 0f, -0.004f);
+            await UniTask.Delay(1000);
+       // }
+        
     }
 }
