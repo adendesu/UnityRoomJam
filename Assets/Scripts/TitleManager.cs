@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+
 public class TitleManager : MonoBehaviour
 {
     [SerializeField] GameObject titleE;
@@ -11,6 +12,7 @@ public class TitleManager : MonoBehaviour
     [SerializeField] Image titleImage;
     [SerializeField] CanvasGroup titleCanvasGroup;
     [SerializeField] CanvasGroup titleRogoCanvasGroup;
+    [SerializeField] AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +31,13 @@ public class TitleManager : MonoBehaviour
 
         titleSequence
             .Append(titleImage.DOColor(Color.white, 3))
-            .AppendCallback(() => { titlePanel.SetActive(false); })
-            .Append(titleCanvasGroup.DOFade(0f, 1))
-            .Join(titleE.transform.DOMoveY(3, 5)).SetRelative(true)
+            .AppendCallback(() => {
+                titlePanel.SetActive(false);
+                audioSource.Play();                   
+                                  })
+            .Append(titleCanvasGroup.DOFade(0, 3))
+            .Join(titleE.transform.DOMoveY(0.11f, 5))
             .Append(titleRogoCanvasGroup.DOFade(1,1));
     }
+
 }
