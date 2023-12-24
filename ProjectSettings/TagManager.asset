@@ -8,6 +8,12 @@ TagManager:
   - ThrowObject
   - star
   - StarPartner
+  - Scenepanel
+  - SceneMane
+  - sceneDown
+  - sceneUp
+  - StageE
+  - hasi
   layers:
   - Default
   - TransparentFX

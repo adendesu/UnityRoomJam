@@ -4,5 +4,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public interface IEventCaller : IEventSystemHandler
 {
-    void OnReset();
+    
+    void SceneMove(int sceneSet);
 }

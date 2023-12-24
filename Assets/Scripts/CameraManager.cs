@@ -8,6 +8,8 @@ public class CameraManager : MonoBehaviour
     private Vector3 offset;
     [SerializeField] float maxX,minX, camZ;
     [SerializeField] float maxY, minY;
+
+    public static bool canCameraMove = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,28 +18,30 @@ public class CameraManager : MonoBehaviour
 
     void LateUpdate()
     {
-        var afteroffset = player.transform.position + offset;
-        afteroffset = new Vector3(afteroffset.x, afteroffset.y, camZ);
-        transform.position = Vector3.Lerp(transform.position, afteroffset, 6.0f * Time.deltaTime);
-        var pos = transform.position;
-        if(transform.position.y > maxY)
-        {
-            pos.y = maxY;
-        }
-        else if(transform.position.y < minY)
-        {
-            pos.y = minY;
-        }
+        
+            var afteroffset = player.transform.position + offset;
+            afteroffset = new Vector3(afteroffset.x, afteroffset.y, camZ);
+            transform.position = Vector3.Lerp(transform.position, afteroffset, 6.0f * Time.deltaTime);
+            var pos = transform.position;
+            if (transform.position.y > maxY)
+            {
+                pos.y = maxY;
+            }
+            else if (transform.position.y < minY)
+            {
+                pos.y = minY;
+            }
 
-        if(transform.position.x > maxX)
-        {
-            pos.x = maxX; 
-        }
-        else if(transform.position.x < minX)
-        {
-            pos.x = minX;
-        }
-        transform.position = pos;
+            if (transform.position.x > maxX)
+            {
+                pos.x = maxX;
+            }
+            else if (transform.position.x < minX)
+            {
+                pos.x = minX;
+            }
+            transform.position = pos;
+        
     }
 
 }

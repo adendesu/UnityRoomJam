@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Starpartnerposition : MonoBehaviour, IEventCaller
+public class Starpartnerposition : MonoBehaviour
 {
     GameObject player;
     GameObject starPartner;
@@ -35,19 +35,19 @@ public class Starpartnerposition : MonoBehaviour, IEventCaller
 
             //Debug.DrawRay(ray.origin, ray.direction * 1f, Color.green, 0.015f); // 長さ1f、緑色で1フレーム可視化
 
-            if (hitW.collider.gameObject != null)
+            if (hitW.collider.gameObject.tag == "stage")
             {
                 OnReset();
             }
-            if (hitS.collider.gameObject != null)
+            if (hitS.collider.gameObject.tag == "stage")
             {
                 OnReset();
             }
-            if (hitA.collider.gameObject != null)
+            if (hitA.collider.gameObject.tag == "stage")
             {
                 OnReset();
             }
-            if (hitD.collider.gameObject != null)
+            if (hitD.collider.gameObject.tag == "stage")
             {
                 OnReset();
             }
@@ -67,10 +67,6 @@ public class Starpartnerposition : MonoBehaviour, IEventCaller
         Debug.Log("reset");
     }
 
-    void CallMyEvent(IEventCaller inf, BaseEventData eventData)
-    {
-        inf.OnReset();
-    }
 }
     
 

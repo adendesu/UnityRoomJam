@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class TitleManager : MonoBehaviour
     [SerializeField] CanvasGroup titleCanvasGroup;
     [SerializeField] CanvasGroup titleRogoCanvasGroup;
     [SerializeField] AudioSource audioSource;
+
+    bool canScene = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,14 @@ public class TitleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetMouseButtonDown(0) && canScene == true)
+        {
+            Sequence titleSequence = DOTween.Sequence();
+
+            titleSequence.Append(titleCanvasGroup.DOFade(1,2))
+                .OnComplete(()=> SceneManager.LoadScene("Op"));
+            canScene = false;
+        }
     }
 
     void TitleMosion()
@@ -37,7 +47,8 @@ public class TitleManager : MonoBehaviour
                                   })
             .Append(titleCanvasGroup.DOFade(0, 3))
             .Join(titleE.transform.DOMoveY(0.11f, 5))
-            .Append(titleRogoCanvasGroup.DOFade(1,1));
+            .Append(titleRogoCanvasGroup.DOFade(1,1))
+            .OnComplete(()=>canScene=true);
     }
 
 }

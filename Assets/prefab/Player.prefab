@@ -1058,9 +1058,10 @@ GameObject:
   - component: {fileID: 2653727356726180124}
   - component: {fileID: 2653727356726180125}
   - component: {fileID: 2653727356726180126}
+  - component: {fileID: 851673096}
   m_Layer: 2
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1117,6 +1118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  tutorial: {fileID: 0}
 --- !u!70 &2653727356726180125
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1130,8 +1132,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.002227068, y: 2.0627384}
-  m_Size: {x: 1.1921098, y: 4.057974}
+  m_Offset: {x: -0.002227068, y: 2.2522664}
+  m_Size: {x: 1.1921098, y: 3.678918}
   m_Direction: 0
 --- !u!50 &2653727356726180126
 Rigidbody2D:
@@ -1154,6 +1156,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!114 &851673096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2653727356726180123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23b380cca322c24e8290d34da80ef31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2715933108367629968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,7 +2695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d410c2f06e2e614cbfec1bbdeef11be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwObject: {fileID: 6686196171560779003, guid: 0bf85dad1a719a2439f27a44fd3f0c7f, type: 3}
+  throwObject: {fileID: 3116660491548877464, guid: 210b9d2f84e757e47bd67f7ec4535f95, type: 3}
   star: {fileID: 4651363351112212628, guid: 4a6b932c829d249c6bd172a75da8d4e7, type: 3}
   starPartner: {fileID: 0}
   pawer: 6
