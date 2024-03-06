@@ -17,6 +17,7 @@ public class ThrowSkillController : MonoBehaviour
     GameObject instanObj;
    public static bool canStarMove;
     public static int throwCount;
+
     // Start is called before the first frame update
    void Start()
     {
@@ -53,29 +54,13 @@ public class ThrowSkillController : MonoBehaviour
             {
 
                 Destroy(instanObj);
-                /* var insObj = GameObject.FindGameObjectWithTag("ThrowObject");
-                 var rb = insObj.GetComponent<Rigidbody>();
-                 var rBForce = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
-                 rBForce.z = 0;
-                 rbForce = rBForce.normalized;*/
                 canStarMove = true;
                 Time.timeScale = 1;
-
-
-                // Invoke("ResetMove", 1);
-                // await StarMove();
-                /*rb.AddForce(rbForce * pawer, ForceMode.Impulse);
-                 if (insObj != null)
-                 {
-                     Destroy(insObj);
-                 }
-                */
 
                 if (GameObject.FindGameObjectWithTag("star") == null)
                 {
                     ThrowSimulation(star);
                 }
-                //starPartner.SetActive(false);
             }
 
             if (Input.GetMouseButtonDown(1) && throwCount > 0)
@@ -92,8 +77,6 @@ public class ThrowSkillController : MonoBehaviour
                     player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
                     Destroy(insObj);
                 }
-
-                //  ResetMove();
             }
         }
 

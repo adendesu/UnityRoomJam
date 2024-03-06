@@ -19,7 +19,7 @@ public class TutorialManager : MonoBehaviour
         tutorialNumber = PlayerPrefs.GetInt("Tutorial", 0);
         if(tutorialNumber == 0)
         {
-            nextSerirhu(tutorialSerihu[tutorialSerihuNumber]);
+            nextText(tutorialSerihu[tutorialSerihuNumber]);
             playerPosi.transform.rotation = Quaternion.Euler(0, 180, 0);
             PlayerController.canPlay = false;
         }
@@ -32,7 +32,7 @@ public class TutorialManager : MonoBehaviour
         {
             if (tutorialSerihuNumber < 10)
             {
-                nextSerirhu(tutorialSerihu[tutorialSerihuNumber]);
+                nextText(tutorialSerihu[tutorialSerihuNumber]);
                 canMove = false;
             }
             
@@ -54,7 +54,7 @@ public class TutorialManager : MonoBehaviour
 
 
 
-    void nextSerirhu(string serihu)
+    void nextText(string serihu)
     {
         tutorialText.text = " ";
         Sequence sceneSequence = DOTween.Sequence();
